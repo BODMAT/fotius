@@ -10,13 +10,13 @@ export function Home() {
                         <a href="https://fotius.cdu.edu.ua/" target="_blank" className="max-w-[200px] flex !p-[5px_50px] justify-center items-center font-family font-normal text-[15px] leading-[3.86667] tracking-[-0.01em] capitalize text-white rounded-3xl dark:bg-[#17254e] bg-[#2d4796] border-2 dark:border-[#17254e] border-[#2d4796] hover:bg-transparent hover:text-[#17254e] transitioned max-lg:m-[0_auto]">More Info</a>
                     </div>
                     <div className="w-full">
-                        <img className="rounded-2xl" src="/home.jpg" alt="home" />
+                        <img className="rounded-2xl" src="./home.jpg" alt="home" />
                     </div>
                 </div>
             </div>
             {/* bg img */}
             <div className="absolute w-full h-full top-0 left-0 z-[-1]">
-                <img className="w-full h-full object-cover" src="/main-bg.png" alt="bg" />
+                <img className="w-full h-full object-cover" src="./main-bg.png" alt="bg" />
             </div>
         </section>
     )

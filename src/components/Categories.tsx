@@ -50,16 +50,16 @@ export function Categories() {
                     className="w-full h-full" >
 
                     <SwiperSlide className="flex justify-center items-center">
-                        <SwiperCard imgSrc="/cards/1.svg" title="121 Software Engineering" text="This specialty focuses on software development, testing, and maintenance. Students learn all stages of creating a software product, from collecting requirements to support after implementation." specialSrc="/people/121.jpg" />
+                        <SwiperCard imgSrc="./cards/1.svg" title="121 Software Engineering" text="This specialty focuses on software development, testing, and maintenance. Students learn all stages of creating a software product, from collecting requirements to support after implementation." specialSrc="./people/121.jpg" />
                     </SwiperSlide>
                     <SwiperSlide className="flex justify-center items-center">
-                        <SwiperCard imgSrc="/cards/2.svg" title="122 Computer Science" text="The specialty covers the theoretical foundations of information processing and computing, as well as practical methods for their implementation in computer systems." specialSrc="/people/122.jpg" />
+                        <SwiperCard imgSrc="./cards/2.svg" title="122 Computer Science" text="The specialty covers the theoretical foundations of information processing and computing, as well as practical methods for their implementation in computer systems." specialSrc="./people/122.jpg" />
                     </SwiperSlide>
                     <SwiperSlide className="flex justify-center items-center">
-                        <SwiperCard imgSrc="/cards/3.svg" title="123 Computer Engineering" text="This specialty combines electronics and computer science to design and develop computer systems and hardware. Students learn the integration of hardware and software components." specialSrc="/people/123.jpg" />
+                        <SwiperCard imgSrc="./cards/3.svg" title="123 Computer Engineering" text="This specialty combines electronics and computer science to design and develop computer systems and hardware. Students learn the integration of hardware and software components." specialSrc="./people/123.jpg" />
                     </SwiperSlide>
                     <SwiperSlide className="flex justify-center items-center">
-                        <SwiperCard imgSrc="/cards/4.svg" title="124 System analysis" text="Systems analysis focuses on researching and designing information systems to improve the efficiency of organizations. Students learn to analyze complex problems and develop appropriate technological solutions." specialSrc="/people/124.jpg" />
+                        <SwiperCard imgSrc="./cards/4.svg" title="124 System analysis" text="Systems analysis focuses on researching and designing information systems to improve the efficiency of organizations. Students learn to analyze complex problems and develop appropriate technological solutions." specialSrc="./people/124.jpg" />
                     </SwiperSlide>
                 </Swiper>
             </div>

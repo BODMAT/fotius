@@ -42,7 +42,7 @@ export function FixedHeader({ scrollToSection, refs }: Props) {
                 <div className="max-w-[1300px] m-[0_auto] box-content pr-[15px] pl-[15px]">
                     <div className="flex justify-between gap-4 items-center h-[100px]">
                         <a href="" className="logo">
-                            <img className="w-[50px] h-[50px]" src="/logo-white.PNG" alt="logo" />
+                            <img className="w-[50px] h-[50px]" src="./logo-white.PNG" alt="logo" />
                         </a>
                         {/* Desktop */}
                         {!isMobile && (
