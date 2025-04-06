@@ -2,13 +2,13 @@ import { useState, useEffect } from 'react';
 
 export const useBurgerMenu = () => {
     const [isBurgerOpen, setIsBurgerOpen] = useState(false);
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 560);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 820);
 
     useEffect(() => {
         const handleResize = () => {
-            const mobile = window.innerWidth <= 560;
+            const mobile = window.innerWidth <= 820;
             setIsMobile(mobile);
-            if (!mobile) setIsBurgerOpen(false); // Закриваємо меню, якщо більше 560px
+            if (!mobile) setIsBurgerOpen(false);
         };
 
         window.addEventListener('resize', handleResize);

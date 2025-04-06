@@ -28,8 +28,6 @@ export function useMap({
             .setView([lat, lng], zoom);
 
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-            attribution:
-                '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
             crossOrigin: "anonymous", // Added to bypass COEP errors
         }).addTo(mapRef.current);
 

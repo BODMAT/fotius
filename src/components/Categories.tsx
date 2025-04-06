@@ -5,8 +5,6 @@ import arrRightSvg from '../assets/arr-right-red.svg';
 import arrLeftSvg from '../assets/arr-left-red.svg';
 // @ts-ignore
 import "swiper/css";
-// @ts-ignore
-import 'swiper/css/effect-coverflow';
 
 import { useRef } from "react";
 
@@ -47,7 +45,7 @@ export function Categories() {
                         nextEl: ".swiper-button-next",
                     }}
                     loop={true}
-                    className="w-full h-full" >
+                    className="w-full h-full">
 
                     <SwiperSlide className="flex justify-center items-center">
                         <SwiperCard imgSrc="./cards/1.svg" title="121 Software Engineering" text="This specialty focuses on software development, testing, and maintenance. Students learn all stages of creating a software product, from collecting requirements to support after implementation." specialSrc="./people/121.jpg" />

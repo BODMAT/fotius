@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { menu } from "./menu";
 import { useBurgerMenu } from "../../hooks/useBurgerMenu";
+import { Auth } from "../Auth";
 
 type Props = {
     scrollToSection: (ref: React.RefObject<HTMLElement>) => void;
@@ -59,6 +60,7 @@ export function FixedHeader({ scrollToSection, refs }: Props) {
                                         {item.name}
                                     </button>
                                 ))}
+                                <Auth />
                             </div>
                         )}
                         {/* Burger */}
@@ -91,7 +93,7 @@ export function FixedHeader({ scrollToSection, refs }: Props) {
                                 ${isBurgerOpen ? 'translate-x-0' : '-translate-x-full'}
                             `}
                         >
-                            <div className="flex flex-col items-center justify-center gap-20 !py-15">
+                            <div className="flex flex-col items-center justify-center gap-20 !py-15 text-3xl">
                                 {menu.map((item, index) => (
                                     <button
                                         onClick={() => {
@@ -100,11 +102,12 @@ export function FixedHeader({ scrollToSection, refs }: Props) {
                                             if (ref?.current) scrollToSection(ref as React.RefObject<HTMLElement>);
                                         }}
                                         key={index}
-                                        className="flex text-[#fff] text-3xl cursor-pointer hover:scale-105 transition-all duration-300"
+                                        className="flex text-[#fff] cursor-pointer hover:scale-105 transition-all duration-300"
                                     >
                                         {item.name}
                                     </button>
                                 ))}
+                                <Auth />
                             </div>
                         </div>
                     </div>
