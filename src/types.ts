@@ -6,3 +6,10 @@ export interface Review {
     userName: string;
     userPhotoURL: string;
 }
+
+export interface Post {
+    userId: number,
+    id: number,
+    title: string,
+    body: string
+}

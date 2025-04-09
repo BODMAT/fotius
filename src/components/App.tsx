@@ -10,6 +10,7 @@ import { Address } from "./Address";
 import { useThemeStore } from "../store/theme";
 import { Reviews } from "./Reviews";
 import { MouseImg } from "./MouseImg";
+import { Posts } from "./Posts";
 
 export function App() {
   const section1Ref = useRef<HTMLElement>(null);
@@ -58,6 +59,9 @@ export function App() {
         </section>
         <section>
           <Reviews />
+        </section>
+        <section>
+          <Posts />
         </section>
         <section ref={section4Ref} id="section4">
           <Address />

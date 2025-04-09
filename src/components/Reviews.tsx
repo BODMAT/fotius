@@ -116,13 +116,13 @@ export function Reviews() {
                     </Swiper>
                     <div className="flex justify-evenly gap-3 border-0 w-[150px]">
                         <button
-                            className={`w-[50px] cursor-pointer swiper-button-prev`}
+                            className={`w-[50px] cursor-pointer swiper-button-prev hover:scale-105 transitioned`}
                             onClick={() => swiperRef.current.swiper.slidePrev()}
                         >
                             <img src={arrLeftSvg} alt="prev" />
                         </button>
                         <button
-                            className={`w-[50px] border-0 cursor-pointer swiper-button-next`}
+                            className={`w-[50px] border-0 cursor-pointer swiper-button-next hover:scale-105 transitioned`}
                             onClick={() => swiperRef.current.swiper.slideNext()}
                         >
                             <img src={arrRightSvg} alt="next" />
