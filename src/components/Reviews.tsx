@@ -8,6 +8,8 @@ import "swiper/css";
 import arrRightSvg from '../assets/arr-right-red.svg';
 import arrLeftSvg from '../assets/arr-left-red.svg';
 import { useRef } from "react";
+import { motion } from "framer-motion";
+import { textFromTopAnimation } from "../animations/animations";
 
 export function Reviews() {
     const { user } = useAuth();
@@ -56,9 +58,13 @@ export function Reviews() {
 
     const swiperRef = useRef<any>(null);
     return (
-        <section className="py-10">
+        <motion.section
+            initial={"hidden"}
+            whileInView={"visible"}
+            viewport={{ once: false, amount: 0.2 }}
+            className="py-10">
             <div className="max-w-[1300px] m-[0_auto] box-content pr-[15px] pl-[15px] flex flex-col gap-5">
-                <h1 className="third-family font-bold text-[35px] leading-[1.3] capitalize dark:text-[#0e2a46] text-[#2d4796] transitioned max-w-[90%]">Reviews:</h1>
+                <motion.h2 variants={textFromTopAnimation} className="third-family font-bold text-[35px] leading-[1.3] capitalize dark:text-[#0e2a46] text-[#2d4796] transitioned max-w-[90%]">Reviews:</motion.h2>
                 <div className="flex items-center gap-4 max-sm:gap-2">
                     <textarea placeholder="Write your review..." className="bg-[#fff] resize-none rounded w-full p-2 max-sm:h-[100px] scrollable" value={text} onChange={(e) => setText(e.target.value)} />
                     <button className="w-[150px] flex p-[5px_50px] justify-center items-center font-family font-normal text-[15px] leading-[3.86667] tracking-[-0.01em] capitalize text-white rounded-3xl dark:bg-[#17254e] bg-[#2d4796] border-2 dark:border-[#17254e] border-[#2d4796] hover:bg-transparent hover:text-[#17254e] transitioned max-lg:m-[0_auto] cursor-pointer max-sm:w-[100px]" onClick={handleSubmit}>Send</button>
@@ -131,6 +137,6 @@ export function Reviews() {
                 </div>)}
 
             </div>
-        </section>
+        </motion.section>
     );
 }

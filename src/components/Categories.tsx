@@ -7,17 +7,23 @@ import arrLeftSvg from '../assets/arr-left-red.svg';
 import "swiper/css";
 
 import { useRef } from "react";
+import { motion } from "framer-motion";
+import { textFromTopAnimation } from "../animations/animations";
 
 export function Categories() {
     const swiperRef = useRef<any>(null);
     return (
-        <section className="py-10">
+        <motion.section
+            initial={"hidden"}
+            whileInView={"visible"}
+            viewport={{ once: false, amount: 0.2 }}
+            className="py-10">
             <div className="max-w-[1300px] m-[0_auto] box-content pr-[15px] pl-[15px] flex flex-col gap-2">
                 <h4 className="font-family font-normal text-[14px] leading-[2.28571] uppercase text-center text-[#704fe6] dark:text-[#432f8b] transitioned px-5 bg-[#e9e2ff] dark:bg-[#cbbbfe] rounded max-w-[150px] mx-auto">Specialties</h4>
                 <div className="flex gap-4 max-sm:flex-col max-sm:items-center max-sm:justify-center !mb-7">
 
-                    <h3 className="third-family font-bold text-[35px] leading-[1.3] capitalize dark:text-[#0e2a46] text-[#2d4796] transitioned max-w-[90%] max-sm:text-center">Training of specialists at the faculty is carried out
-                        in the following specialties (engineering areas):</h3>
+                    <motion.h3 variants={textFromTopAnimation} className="third-family font-bold text-[35px] leading-[1.3] capitalize dark:text-[#0e2a46] text-[#2d4796] transitioned max-w-[90%] max-sm:text-center">Training of specialists at the faculty is carried out
+                        in the following specialties (engineering areas):</motion.h3>
                     <div className="flex gap-3 border-0">
                         <button
                             className={`w-[50px] cursor-pointer swiper-button-prev hover:scale-105 transitioned`}
@@ -61,6 +67,6 @@ export function Categories() {
                     </SwiperSlide>
                 </Swiper>
             </div>
-        </section>
+        </motion.section>
     )
 }
